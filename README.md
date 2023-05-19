@@ -15,9 +15,6 @@ Docker
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
 - Create ENV file (.env) with this configuration in each project:
 ```
 PORT=
@@ -25,9 +22,9 @@ BASIC_AUTH_USERNAME=
 BASIC_AUTH_PASSWORD=
 PUBLIC_KEY_PATH=
 PRIVATE_KEY_PATH=
-DSN_SENTRY_URL=
 MONGO_DATABASE_URL=
 ```
+- Or you can, rename .env.example to .env
 - Then run this command
 ```
 Run using docker
@@ -45,7 +42,7 @@ $ docker-compose up
 
 ### Authors
 
-* **farid_alfernass** - *Initial work* - [Github](https://github.com/farid-alfernass)
+* **farid tri wicaksono** - *Initial work* - [Github](https://github.com/farid-alfernass)
 
 ### Documentation
 
