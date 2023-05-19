@@ -1,0 +1,111 @@
+{
+  "name": "node-project",
+  "version": "1.0.0",
+  "description": "Repo for node project",
+  "main": "index.js",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "junit": "_mocha \"test/**/*_test.js\" --timeout=5000 --reporter mocha-junit-reporter",
+    "test": "mocha \"test/**/*_test.js\" --timeout=5000 --exit",
+    "cover": "nyc _mocha \"test/**/*_test.js\" --recursive --exit",
+    "slint": "sonarlint --src 'bin/**' --tests 'test/**'",
+    "lint": "eslint bin test",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "keywords": [
+    "api",
+    "backend",
+    "nodejs"
+  ],
+  "author": "Farid Tri Wicaksono",
+  "dependencies": {
+    "ali-oss": "^6.17.1",
+    "aws-sdk": "^2.304.0",
+    "azure-storage": "^2.10.3",
+    "chai-http": "^4.3.0",
+    "confidence": "^5.0.1",
+    "crypto": "^1.0.1",
+    "dateformat": "^4.4.1",
+    "dd-trace": "^2.9.1",
+    "dotenv": "^6.1.0",
+    "elastic-apm-node": "^3.23.0",
+    "elasticsearch": "^15.4.1",
+    "events": "1.1.1",
+    "file-type": "^16.5.4",
+    "hot-shots": "^9.0.0",
+    "joi": "^14.0.1",
+    "jsonwebtoken": "^8.3.0",
+    "kafka-node": "^5.0.0",
+    "minio": "^7.0.5",
+    "mongodb": "^3.7.3",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "node-mocks-http": "^1.11.0",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.3",
+    "passport": "0.6.0",
+    "passport-http": "0.3.0",
+    "pg": "^8.7.1",
+    "prom-client": "^14.0.1",
+    "query-string": "5.0.1",
+    "raven": "2.2.1",
+    "redis": "^3.0.2",
+    "request-promise": "^4.2.6",
+    "response-time": "^2.3.2",
+    "restify": "^8.6.0",
+    "restify-cors-middleware2": "^2.1.2",
+    "restify-errors": "^8.0.0",
+    "rewire": "^5.0.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-restify": "^3.0.8",
+    "util": "0.10.3",
+    "uuid": "3.1.0",
+    "validate.js": "0.12.0",
+    "winston": "^2.4.3",
+    "winston-logstash": "^0.4.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^10.0.0",
+    "mocha-junit-reporter": "^2.0.2",
+    "nyc": "^15.0.1",
+    "pre-commit": "^1.2.2",
+    "sinon": "^4.2.2",
+    "sonarlint": "^1.1.0"
+  },
+  "nyc": {
+    "lines": 10,
+    "statements": 10,
+    "functions": 10,
+    "branches": 10,
+    "check-coverage": true,
+    "include": [
+      "bin/**/*.js"
+    ],
+    "exclude": [
+      "index.js",
+      "bin/api/app/server.js"
+    ],
+    "reporter": [
+      "html",
+      "text",
+      "lcov",
+      "text-summary"
+    ],
+    "all": true,
+    "cache": true,
+    "report-dir": "./coverage"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
