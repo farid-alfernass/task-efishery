@@ -15,7 +15,13 @@ const getFetchListConvertion = async (role) => {
   return getData(role);
 };
 
+const getFetchAgregate = async (role) => {
+  const getData = (role) => fetchApp.getFetchAgregate(role);
+  return getData(role);
+};
+
 module.exports = {
   getFetchList,
-  getFetchListConvertion
+  getFetchListConvertion,
+  getFetchAgregate
 };

@@ -25,7 +25,19 @@ const getFetchListConvertion = async (req, res) => {
   sendResponse(await getData());
 };
 
+const getFetchAgregate = async (req, res) => {
+  const { roles } = req;
+  const getData = async () => queryHandler.getFetchAgregate(roles);
+  const sendResponse = async (result) => {
+    (result.err)
+      ? wrapper.response(res, 'fail', result, 'Get Fetch Agregate', httpError.NOT_FOUND)
+      : wrapper.response(res, 'success', result, 'Get Fetch Agregate', http.OK);
+  };
+  sendResponse(await getData());
+};
+
 module.exports = {
   getFetchList,
-  getFetchListConvertion
+  getFetchListConvertion,
+  getFetchAgregate
 };

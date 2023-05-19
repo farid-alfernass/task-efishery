@@ -56,6 +56,7 @@ class AppServer {
     this.server.get('/users/v1/profile', jwtAuth.verifyToken, userHandler.getUser);
     this.server.get('/fetch/v1/list', jwtAuth.verifyToken, fetchAppHandler.getFetchList);
     this.server.get('/fetch/v2/list', jwtAuth.verifyToken, fetchAppHandler.getFetchListConvertion);
+    this.server.get('/fetch/v1/agregate', jwtAuth.verifyToken, fetchAppHandler.getFetchAgregate);
 
     if (parseInt(config.get('/monitoring')) === 1) {
       prometheus.injectMetricsRoute(this.server);

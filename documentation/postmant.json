@@ -1,0 +1,920 @@
+// 20230519150913
+// https://api.postman.com/collections/10198024-4b6235cd-cfdb-4265-b4b3-1e05df67cf2a?access_key=PMAT-01H0SGW3E434GV3XZBAEXD442Z
+
+{
+   "collection": {
+     "info": {
+       "_postman_id": "4b6235cd-cfdb-4265-b4b3-1e05df67cf2a",
+       "name": "lumenchecklist",
+       "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+       "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+       "updatedAt": "2023-04-25T09:06:17.000Z",
+       "uid": "10198024-4b6235cd-cfdb-4265-b4b3-1e05df67cf2a"
+     },
+     "item": [
+       {
+         "name": "Template",
+         "item": [
+           {
+             "name": "List of Checklist Template",
+             "id": "e39c6d43-dcc6-4ee3-9839-b326515d7099",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "type": "text",
+                   "value": "bearer ZkRtSWRCT1dIZUFMeGZqQURTQ2NiZjlaa2JvdldFNzZIWUtLeGxWRA=="
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/templates",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "templates"
+                 ]
+               },
+               "description": "List of Templates"
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-e39c6d43-dcc6-4ee3-9839-b326515d7099"
+           },
+           {
+             "name": "Get Checklist Template",
+             "id": "0bb606bc-e527-4f75-a2e4-480a76f972c8",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer ZkRtSWRCT1dIZUFMeGZqQURTQ2NiZjlaa2JvdldFNzZIWUtLeGxWRA==",
+                   "type": "text"
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/templates/1",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "templates",
+                   "1"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-0bb606bc-e527-4f75-a2e4-480a76f972c8"
+           },
+           {
+             "name": "Create Checklist Template",
+             "id": "1983cb04-63fa-4b84-90d4-62f494a596f2",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "POST",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer VnZZVlRraHF2SjR5SVlib3pzSkJMRVRwSUZVaDZlNUdzNE9senlvMg==",
+                   "type": "text"
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": {\r\n    \"attributes\": {\r\n      \"name\": \"foo template\",\r\n      \"checklist\": {\r\n        \"description\": \"my checklist\",\r\n        \"due_interval\": 3,\r\n        \"due_unit\": \"hour\"\r\n      },\r\n      \"items\": [\r\n        {\r\n          \"description\": \"my foo item\",\r\n          \"urgency\": 2,\r\n          \"due_interval\": 40,\r\n          \"due_unit\": \"minute\"\r\n        },\r\n        {\r\n          \"description\": \"my bar item\",\r\n          \"urgency\": 3,\r\n          \"due_interval\": 30,\r\n          \"due_unit\": \"minute\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/templates?=",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "templates"
+                 ],
+                 "query": [
+                   {
+                     "key": "",
+                     "value": "",
+                     "type": "text"
+                   }
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-1983cb04-63fa-4b84-90d4-62f494a596f2"
+           },
+           {
+             "name": "Update Checklist Template",
+             "id": "e0bb5f51-1474-468b-be4e-b5e30b3bfa7e",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "PATCH",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer VnZZVlRraHF2SjR5SVlib3pzSkJMRVRwSUZVaDZlNUdzNE9senlvMg==",
+                   "type": "text"
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": {\r\n    \"name\": \"foo template\",\r\n    \"checklist\": {\r\n      \"description\": \"my checklist\",\r\n      \"due_interval\": 3,\r\n      \"due_unit\": \"hour\"\r\n    },\r\n    \"items\": [\r\n      {\r\n        \"description\": \"my foo item\",\r\n        \"urgency\": 2,\r\n        \"due_interval\": 40,\r\n        \"due_unit\": \"minute\"\r\n      },\r\n      {\r\n        \"description\": \"my bar item\",\r\n        \"urgency\": 3,\r\n        \"due_interval\": 30,\r\n        \"due_unit\": \"minute\"\r\n      }\r\n    ]\r\n  }\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/templates/1",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "templates",
+                   "1"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-e0bb5f51-1474-468b-be4e-b5e30b3bfa7e"
+           },
+           {
+             "name": "Delete Checklist Template",
+             "id": "188eb3ce-c6e7-4caa-84ce-d0e2552b4813",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "DELETE",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer VnZZVlRraHF2SjR5SVlib3pzSkJMRVRwSUZVaDZlNUdzNE9senlvMg==",
+                   "type": "text"
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/templates/54",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "templates",
+                   "54"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-188eb3ce-c6e7-4caa-84ce-d0e2552b4813"
+           }
+         ],
+         "id": "d564dd53-04ab-487e-a098-60cb469cee15",
+         "uid": "10198024-d564dd53-04ab-487e-a098-60cb469cee15"
+       },
+       {
+         "name": "Checklist",
+         "item": [
+           {
+             "name": "Get checklist",
+             "id": "1fb532c6-5106-4826-b58e-0647762226d1",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "type": "text",
+                   "value": "bearer VFIxUnlabGJ3enEwM2pMcFlDdGZCaGZtQlVxSndNdTNFNFoxbVRvTg=="
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/3",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "3"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-1fb532c6-5106-4826-b58e-0647762226d1"
+           },
+           {
+             "name": "Delete checklist",
+             "id": "8ff6f78e-94a1-42ff-8b02-bf90a7990add",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "DELETE",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "type": "text",
+                   "value": "bearer RUw4YXFQR2hmUnlwSEtlZ3U5Um5ad2FEWkp1NDA0akdSanpyVlVNbQ=="
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/37",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "37"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-8ff6f78e-94a1-42ff-8b02-bf90a7990add"
+           },
+           {
+             "name": "Update checklist",
+             "id": "9a7992eb-4d74-474a-9757-8252b3d8a338",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "PATCH",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer RUw4YXFQR2hmUnlwSEtlZ3U5Um5ad2FEWkp1NDA0akdSanpyVlVNbQ==",
+                   "type": "text"
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": {\r\n    \"type\": \"checklists\",\r\n    \"id\": 1,\r\n    \"attributes\": {\r\n      \"object_domain\": \"contact\",\r\n      \"object_id\": \"1\",\r\n      \"description\": \"Need to verify this guy house.\",\r\n      \"is_completed\": false,\r\n      \"completed_at\": null,\r\n      \"created_at\": \"2018-01-25T07:50:14+00:00\"\r\n    },\r\n    \"links\": {\r\n      \"self\": \"https://dev-kong.command-api.kw.com/checklists/50127\"\r\n    }\r\n  }\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/6",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "6"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-9a7992eb-4d74-474a-9757-8252b3d8a338"
+           },
+           {
+             "name": "Create checklist",
+             "id": "d283ae32-8171-4721-a9b1-85942ddd167a",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "POST",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "type": "text",
+                   "value": "bearer RUw4YXFQR2hmUnlwSEtlZ3U5Um5ad2FEWkp1NDA0akdSanpyVlVNbQ=="
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": {\r\n    \"attributes\": {\r\n      \"object_domain\": \"contact\",\r\n      \"object_id\": \"1\",\r\n      \"due\": \"2019-01-25T07:50:14+00:00\",\r\n      \"urgency\": 1,\r\n      \"description\": \"Need to verify this guy house.\",\r\n      \"items\": [\r\n        \"Visit his house\",\r\n        \"Capture a photo\",\r\n        \"Meet him on the house\"\r\n      ],\r\n      \"task_id\": \"123\"\r\n    }\r\n  }\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-d283ae32-8171-4721-a9b1-85942ddd167a"
+           },
+           {
+             "name": "Get list of checklists",
+             "id": "8c314fe7-8494-4de5-877b-07640c9d5c98",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "type": "text",
+                   "value": "bearer VFIxUnlabGJ3enEwM2pMcFlDdGZCaGZtQlVxSndNdTNFNFoxbVRvTg=="
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-8c314fe7-8494-4de5-877b-07640c9d5c98"
+           }
+         ],
+         "id": "627ca724-201b-44d0-bad0-8204b35e9e00",
+         "uid": "10198024-627ca724-201b-44d0-bad0-8204b35e9e00"
+       },
+       {
+         "name": "Item",
+         "item": [
+           {
+             "name": "Complete item(s)",
+             "id": "7fa4e8d9-620d-46a0-8382-3e635b0bb537",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "POST",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer VFIxUnlabGJ3enEwM2pMcFlDdGZCaGZtQlVxSndNdTNFNFoxbVRvTg==",
+                   "type": "text"
+                 },
+                 {
+                   "key": "",
+                   "value": "",
+                   "type": "text",
+                   "disabled": true
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": [\r\n    {\r\n      \"item_id\": 1\r\n    },\r\n    {\r\n      \"item_id\": 2\r\n    },\r\n    {\r\n      \"item_id\": 3\r\n    },\r\n    {\r\n      \"item_id\": 4\r\n    }\r\n  ]\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/complete",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "complete"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-7fa4e8d9-620d-46a0-8382-3e635b0bb537"
+           },
+           {
+             "name": "Incomplete item(s)",
+             "id": "acd4b551-350a-45a6-afe2-4ba48b10ae15",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "POST",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer VFIxUnlabGJ3enEwM2pMcFlDdGZCaGZtQlVxSndNdTNFNFoxbVRvTg==",
+                   "type": "text"
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": [\r\n    {\r\n      \"item_id\": 1\r\n    },\r\n    {\r\n      \"item_id\": 2\r\n    }\r\n  ]\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/incomplete",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "incomplete"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-acd4b551-350a-45a6-afe2-4ba48b10ae15"
+           },
+           {
+             "name": "List all items in given checklist",
+             "id": "3f7c0a0d-b6ac-4ea9-904c-343f7a167749",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer VFIxUnlabGJ3enEwM2pMcFlDdGZCaGZtQlVxSndNdTNFNFoxbVRvTg==",
+                   "type": "text"
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/7/items",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "7",
+                   "items"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-3f7c0a0d-b6ac-4ea9-904c-343f7a167749"
+           },
+           {
+             "name": "Create checklist item",
+             "id": "d3452e2d-2a9a-4da1-ab13-d7a3340a5ae7",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "POST",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer RUw4YXFQR2hmUnlwSEtlZ3U5Um5ad2FEWkp1NDA0akdSanpyVlVNbQ==",
+                   "type": "text"
+                 },
+                 {
+                   "key": "Content-Type",
+                   "value": "application/json",
+                   "type": "text"
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": {\r\n    \"attribute\": {\r\n      \"description\": \"Need to verify this guy house.\",\r\n      \"due\": \"2019-01-19 18:34:51\",\r\n      \"urgency\": \"2\",\r\n      \"assignee_id\": 123\r\n    }\r\n  }\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/1/items?",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "1",
+                   "items"
+                 ],
+                 "query": [
+                   {
+                     "key": "",
+                     "value": "",
+                     "type": "text",
+                     "disabled": true
+                   }
+                 ]
+               },
+               "description": "Item Store"
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-d3452e2d-2a9a-4da1-ab13-d7a3340a5ae7"
+           },
+           {
+             "name": "Get checklist item",
+             "id": "a9c7a0a6-24a7-490d-840e-2265ac295bc2",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer VFIxUnlabGJ3enEwM2pMcFlDdGZCaGZtQlVxSndNdTNFNFoxbVRvTg==",
+                   "type": "text"
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/1/items/3",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "1",
+                   "items",
+                   "3"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-a9c7a0a6-24a7-490d-840e-2265ac295bc2"
+           },
+           {
+             "name": "Update checklist item",
+             "id": "227cec4d-5aa7-401f-97c1-e7e482f15e8b",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "PATCH",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer RUw4YXFQR2hmUnlwSEtlZ3U5Um5ad2FEWkp1NDA0akdSanpyVlVNbQ==",
+                   "type": "text"
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": {\r\n    \"attribute\": {\r\n      \"description\": \"Need to verify this guy house.\",\r\n      \"due\": \"2019-01-19 18:34:51\",\r\n      \"urgency\": \"2\",\r\n      \"assignee_id\": 123\r\n    }\r\n  }\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/3/items/1",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "3",
+                   "items",
+                   "1"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-227cec4d-5aa7-401f-97c1-e7e482f15e8b"
+           },
+           {
+             "name": "Delete checklist item",
+             "id": "0317be7e-c078-4d72-9826-13ad5bbeb41e",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "DELETE",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "type": "text",
+                   "value": "bearer RUw4YXFQR2hmUnlwSEtlZ3U5Um5ad2FEWkp1NDA0akdSanpyVlVNbQ=="
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/1/items/1",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "1",
+                   "items",
+                   "1"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-0317be7e-c078-4d72-9826-13ad5bbeb41e"
+           },
+           {
+             "name": "Update bulk checklist",
+             "id": "95d14235-4df6-4006-8506-82f3b27c5c9b",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "POST",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "type": "text",
+                   "value": "bearer RUw4YXFQR2hmUnlwSEtlZ3U5Um5ad2FEWkp1NDA0akdSanpyVlVNbQ=="
+                 }
+               ],
+               "body": {
+                 "mode": "raw",
+                 "raw": "{\r\n  \"data\": [\r\n    {\r\n      \"id\": \"11\",\r\n      \"action\": \"update\",\r\n      \"attributes\": {\r\n        \"description\": \"Percobaan\",\r\n        \"due\": \"2019-01-19 18:34:51\",\r\n        \"urgency\": \"2\"\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"12\",\r\n      \"action\": \"update\",\r\n      \"attributes\": {\r\n        \"description\": \"Percobaan\",\r\n        \"due\": \"2019-01-19 18:34:51\",\r\n        \"urgency\": \"2\"\r\n      }\r\n    }\r\n  ]\r\n}"
+               },
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/1/items/_bulk",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "1",
+                   "items",
+                   "_bulk"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-95d14235-4df6-4006-8506-82f3b27c5c9b"
+           },
+           {
+             "name": "Summary item",
+             "id": "ae6d42f3-bc00-412d-acaa-8ae6305afab8",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "type": "text",
+                   "value": "bearer RUw4YXFQR2hmUnlwSEtlZ3U5Um5ad2FEWkp1NDA0akdSanpyVlVNbQ=="
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/checklists/items/summaries?date&object_domain&tz",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "checklists",
+                   "items",
+                   "summaries"
+                 ],
+                 "query": [
+                   {
+                     "key": "date",
+                     "value": ""
+                   },
+                   {
+                     "key": "object_domain",
+                     "value": ""
+                   },
+                   {
+                     "key": "tz",
+                     "value": ""
+                   }
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-ae6d42f3-bc00-412d-acaa-8ae6305afab8"
+           }
+         ],
+         "id": "2c147cef-3d24-45ff-acf7-423af9304bba",
+         "uid": "10198024-2c147cef-3d24-45ff-acf7-423af9304bba"
+       },
+       {
+         "name": "User",
+         "item": [
+           {
+             "name": "AuthController.register",
+             "id": "832920dc-6b73-4a1c-adc8-53f97ddca643",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "POST",
+               "header": [
+                 
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/register?name=Mulyawan Sentosa&email=mulyawan@flazhost.com&password=admin",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "register"
+                 ],
+                 "query": [
+                   {
+                     "key": "name",
+                     "value": "Mulyawan Sentosa"
+                   },
+                   {
+                     "key": "email",
+                     "value": "mulyawan@flazhost.com"
+                   },
+                   {
+                     "key": "password",
+                     "value": "admin"
+                   }
+                 ]
+               },
+               "description": "Registering User"
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-832920dc-6b73-4a1c-adc8-53f97ddca643"
+           },
+           {
+             "name": "AuthController.login",
+             "id": "0219961d-3395-4938-a846-e78794945a58",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "POST",
+               "header": [
+                 
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/login?email=mulyawan@flazhost.com&password=admin",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "login"
+                 ],
+                 "query": [
+                   {
+                     "key": "email",
+                     "value": "mulyawan@flazhost.com"
+                   },
+                   {
+                     "key": "password",
+                     "value": "admin"
+                   }
+                 ]
+               },
+               "description": "Login API"
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-0219961d-3395-4938-a846-e78794945a58"
+           },
+           {
+             "name": "AuthController.destroy",
+             "id": "a14a2bb9-8021-4d50-8689-648d97c2c627",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "DELETE",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer Yk9HNVZjS25wWHl2NFRhUklLZkJ5Zk5YcVU5dzl4ZVpkT29ycXNxTg==",
+                   "type": "text"
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/user/1",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "user",
+                   "1"
+                 ]
+               },
+               "description": "Login API"
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-a14a2bb9-8021-4d50-8689-648d97c2c627"
+           },
+           {
+             "name": "AuthController.logout",
+             "id": "f1442912-d664-4683-b00b-80faa478226a",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer TTlwb09UaEt4cG1IRUlvNzBGNFNuVW0yTkk1ZFBGQXFwZ3VUOWFrVw==",
+                   "type": "text"
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/logout",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "logout"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-f1442912-d664-4683-b00b-80faa478226a"
+           },
+           {
+             "name": "Auth.Controller.show",
+             "id": "66fbb33c-ea35-4c96-afb9-eb7f35d4b539",
+             "protocolProfileBehavior": {
+               "disableBodyPruning": true
+             },
+             "request": {
+               "method": "GET",
+               "header": [
+                 {
+                   "key": "Authorization",
+                   "value": "bearer SFZLa29XdVhVWEJFdGhEb1MxWUNBUFVsZnFoSm1Jak5rR05TakI2UQ==",
+                   "type": "text"
+                 }
+               ],
+               "url": {
+                 "raw": "lumenchecklist.test/user/740",
+                 "host": [
+                   "lumenchecklist",
+                   "test"
+                 ],
+                 "path": [
+                   "user",
+                   "740"
+                 ]
+               }
+             },
+             "response": [
+               
+             ],
+             "uid": "10198024-66fbb33c-ea35-4c96-afb9-eb7f35d4b539"
+           }
+         ],
+         "id": "c2915d33-3849-417d-beaa-490a6d8b4342",
+         "description": "User Registration and Login",
+         "uid": "10198024-c2915d33-3849-417d-beaa-490a6d8b4342"
+       }
+     ]
+   }
+ }
