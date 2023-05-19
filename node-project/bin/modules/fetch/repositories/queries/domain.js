@@ -1,7 +1,7 @@
 
 const Query = require('./query');
 const wrapper = require('../../../../helpers/utils/wrapper');
-const { InternalServerError } = require('../../../../helpers/error');
+const { InternalServerError, UnauthorizedError } = require('../../../../helpers/error');
 const service = require('../../utils/service');
 const _ = require('lodash');
 const moment = require('moment');
@@ -20,6 +20,9 @@ class FetchApp {
   }
   
   async getFetchAgregate(roles) {
+    if(!['admin'].includes(roles)){
+      return wrapper.error(new UnauthorizedError('Role user not eligible to this action'));
+    }
     const list = await service.getfetchList();
     if(list.err){
       return wrapper.error(new InternalServerError('Internal server error'));
