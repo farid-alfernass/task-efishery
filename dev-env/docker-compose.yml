@@ -1,0 +1,22 @@
+version: '3.8'
+
+services: 
+    mongo:
+        container_name: mongo
+        image: mongo:4-xenial
+        volumes: 
+            - mongo-data:/data/db
+        ports: 
+            - 27017:27017
+    redisdb:
+        container_name: redis
+        image: redis:6
+        ports:
+            - 6379:6379
+        volumes:
+            - redis_data:/bitnami/redis/data
+
+volumes: 
+    mongo-data:
+    redis_data:
+        driver: local
