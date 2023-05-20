@@ -32,7 +32,7 @@ Run using docker
 $ docker-compose up
 ```
 ### C4 Diagram
-![image.png]( {diagram.jpeg} )
+<img src="./diagram.jpeg" width="500">
 
 
 ### Built With
