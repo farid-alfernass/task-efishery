@@ -31,6 +31,36 @@ Run using docker
 ...
 $ docker-compose up
 ```
+
+### RUNNING GO PROJECT
+```
+- assuming your laptop already has Go 1.17 or higher installed
+- Rename .env.example to .env
+- Run Use command make
+...
+$ make run
+```
+- If found error, please download lib
+...
+$ go mod download
+```
+...
+$ go mod tidy
+```
+- please run again
+...
+$ make run 
+
+### RUNNING NodeJS PROJECT
+```
+- assuming your laptop already has NodeJS 14 or higher installed
+- Rename .env.example to .env
+- Download depency and Start app
+...
+$ npm i
+$ npm run start
+```
+
 ### C4 Diagram
 <img src="./diagram.jpeg" width="500">
 
