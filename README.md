@@ -31,6 +31,8 @@ Run using docker
 ...
 $ docker-compose up
 ```
+### C4 Diagram
+![image.png]( {diagram.jpeg} )
 
 
 ### Built With
